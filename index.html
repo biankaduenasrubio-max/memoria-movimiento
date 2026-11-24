@@ -7,16 +7,16 @@
 <meta name="description" content="Memoria del proyecto de grado MOVIMIENTO: un sistema para dar el primer paso. Bianka Dueñas Rubio · Diseño de Comunicación Visual · Pontificia Universidad Javeriana Cali · 2026-2.">
 <meta property="og:title" content="MOVIMIENTO · Memoria digital">
 <meta property="og:description" content="Un sistema para dar el primer paso. Bianka Dueñas Rubio · Diseño de Comunicación Visual · PUJ Cali · 2026-2.">
-<meta property="og:image" content="pages/03.jpg">
+<meta property="og:image" content="memoria-movimiento-web%20(1)/pages/03.jpg">
 <meta name="theme-color" content="#fcdce1">
-<link rel="icon" href="img/favicon.png">
+<link rel="icon" href="memoria-movimiento-web%20(1)/img/favicon.png">
 <style>
 /* VOICE: tierno y cuidado, como hojear un libro hecho a mano.
    IDEA: la memoria impresa de MOVIMIENTO sobre una mesa rosada.
    PICTURE: el libro mismo, grande, que se pasa con el dedo.
    COLOUR and TYPE: rosado claro #fcdce1, rosa #e386ae, vino #9d4751; Skate para la frase, Avenir/sistema para controles.
    LAYOUT: barra fina arriba, libro centrado ocupando todo, controles abajo y tira de miniaturas plegable. */
-@font-face{font-family:Skate;src:url(fonts/Skate.ttf) format("truetype");font-display:swap}
+@font-face{font-family:Skate;src:url("memoria-movimiento-web%20(1)/fonts/Skate.ttf") format("truetype");font-display:swap}
 :root{color-scheme:light dark;
   --bg:light-dark(#fcdce1,#2b1d21);--ink:light-dark(#3b2a2e,#fbe7ec);--vino:light-dark(#9d4751,#f3a6c4);
   --rosa:#e386ae;--chip:light-dark(#fff,#3d2a30);--line:light-dark(#efb9c9,#5a3c45);--shadow:light-dark(rgba(157,71,81,.28),rgba(0,0,0,.55))}
@@ -67,7 +67,7 @@ body.full header{display:none}
 </head>
 <body>
 <header>
-  <img src="img/logo.png" alt="MOVIMIENTO">
+  <img src="memoria-movimiento-web%20(1)/img/logo.png" alt="MOVIMIENTO">
   <div class="who"><b>Memoria · Proyecto de grado 2026-2</b><span>Bianka Dueñas Rubio · Diseño de Comunicación Visual · PUJ Cali</span></div>
   <div class="phrase">Un sistema para dar el primer paso</div>
 </header>
@@ -84,11 +84,11 @@ body.full header{display:none}
   <button id="next2" aria-label="Página siguiente">›</button>
   <button id="tg" aria-pressed="false" aria-controls="thumbs">Páginas</button>
   <button id="fs">Pantalla completa</button>
-  <a class="btn" href="MOVIMIENTO_memoria_BiankaDuenas.pdf" download>Descargar PDF</a>
+  <a class="btn" href="memoria-movimiento-web%20(1)/MOVIMIENTO_memoria_BiankaDuenas.pdf" download>Descargar PDF</a>
 </nav>
 <div id="thumbs" aria-label="Todas las páginas"></div>
 
-<script src="js/page-flip.browser.js"></script>
+<script src="memoria-movimiento-web%20(1)/js/page-flip.browser.js"></script>
 <script>
 {
 const N = 40, PW = 612, PH = 396;
@@ -100,9 +100,9 @@ const count = document.getElementById('count');
 const thumbs = document.getElementById('thumbs');
 
 book.innerHTML = Array.from({length: N}, (_, i) =>
-  `<div class="page"${i === 0 || i === N - 1 ? ' data-density="hard"' : ''}><img src="pages/${pad(i + 1)}.jpg" alt="Página ${i + 1}" draggable="false"></div>`).join('');
+  `<div class="page"${i === 0 || i === N - 1 ? ' data-density="hard"' : ''}><img src="memoria-movimiento-web%20(1)/pages/${pad(i + 1)}.jpg" alt="Página ${i + 1}" draggable="false"></div>`).join('');
 thumbs.innerHTML = Array.from({length: N}, (_, i) =>
-  `<button data-i="${i}" aria-label="Ir a la página ${i + 1}"><img src="thumbs/${pad(i + 1)}.jpg" alt="" loading="lazy"><span>${i + 1}</span></button>`).join('');
+  `<button data-i="${i}" aria-label="Ir a la página ${i + 1}"><img src="memoria-movimiento-web%20(1)/thumbs/${pad(i + 1)}.jpg" alt="" loading="lazy"><span>${i + 1}</span></button>`).join('');
 
 function fit() {
   const r = stage.getBoundingClientRect();
